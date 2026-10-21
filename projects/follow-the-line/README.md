@@ -22,7 +22,7 @@ Adding 1 shifts both values into the interval $[0,2]$, providing a common zero b
 The error is calculated using the absolute difference:
 
 $$
-E=|f_1-f_2|=|a-b|
+E=|f_1-f_2|=|a-b |
 $$
 
 When $a=b$, the error is zero, meaning the point lies exactly on $y=x$. As the coordinates diverge, the error increases. This measurement is proportional to the point's perpendicular distance from the line.
