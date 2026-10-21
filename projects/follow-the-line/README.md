@@ -1,3 +1,4 @@
+
 # Follow the Line Game
 
 An interactive Desmos project where the goal is to move a draggable point as close as possible to the line $y=x$.
@@ -12,26 +13,60 @@ The game centers on a draggable point, $(a,b)$, inside a square bounded by $-1 \
 
 I designed a system that measures how closely the point follows this line and translates that measurement into visual feedback.
 
-Two functions track the point's coordinates:
+### Measuring the Error
 
-- $f_1=a+1$ represents the x-coordinate.
-- $f_2=b+1$ represents the y-coordinate.
+Two functions track the point's coordinates after shifting each value by 1:
+
+- $f_1(x)=a+1$ represents the shifted x-coordinate.
+- $f_2(x)=b+1$ represents the shifted y-coordinate.
 
 Adding 1 shifts both values into the interval $[0,2]$, providing a common zero baseline for the visual indicators.
 
 The error is calculated using the absolute difference:
 
 $$
-E=|f_1-f_2|=|a-b |
+E = \lvert\, f_1(x)-f_2(x) \,\rvert = \lvert\, a-b \,\rvert
 $$
 
 When $a=b$, the error is zero, meaning the point lies exactly on $y=x$. As the coordinates diverge, the error increases. This measurement is proportional to the point's perpendicular distance from the line.
 
-The graph displays the two coordinate values using green and red indicator lines, while a blue indicator represents the error. A piecewise RGB color function uses that error to continuously change the square's color:
+The graph displays the shifted x- and y-coordinate values using green and red indicator lines, while a blue indicator represents the error.
 
-- **Green:** The point lies on or very close to the target line.
-- **Yellow:** The point has a moderate error.
-- **Red:** The point is farther from the line.
+### Dynamic Color System
+
+The square itself is created using an inequality with a domain restriction:
+
+$$
+-1 \leq y \leq 1 \quad \{-1 \leq x \leq 1\}
+$$
+
+Rather than assigning this region a fixed color, I used a variable RGB expression to make its fill color depend directly on the point's position.
+
+First, the error is scaled to determine the RGB channel values:
+
+$$
+c_1 = 255E
+$$
+
+I then defined the square's color using a piecewise function:
+
+$$
+C_1 =
+\begin{cases}
+\operatorname{rgb}(2c_1,255,0), & c_1 \leq 127.5 \\[6pt]
+\operatorname{rgb}(255,2(255-c_1),0), & c_1 > 127.5
+\end{cases}
+$$
+
+The two branches control different stages of the color transition:
+
+- **Green to yellow:** As the error initially increases, the red channel increases while the green channel remains at full intensity.
+- **Yellow to red:** Once the error passes the piecewise threshold, the red channel stays at full intensity while the green channel decreases.
+- **Red:** At larger errors, the green channel reaches its lower limit and the square remains red, indicating that the point is far from the target line.
+
+Because this RGB expression is assigned directly to the square's inequality, moving the draggable point causes the entire region to change color dynamically.
+
+This connects the algebraic relationship between two coordinates to a continuous visual response. Instead of merely displaying a numerical error, the graph uses mathematical functions to make that error immediately observable.
 
 ## Screenshots
 
@@ -49,6 +84,6 @@ The graph displays the two coordinate values using green and red indicator lines
 
 ## Mathematical Concepts
 
-This project combines coordinate geometry, absolute value, domain restrictions, functions, and piecewise color transformations.
+This project combines coordinate geometry, absolute value, domain restrictions, functions, piecewise definitions, and RGB color transformations.
 
 It illustrates how a simple mathematical relationship can be used to create an interactive system: equations determine the behavior, and visual feedback makes the underlying mathematics immediately observable.
