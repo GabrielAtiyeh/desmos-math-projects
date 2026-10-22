@@ -36,7 +36,7 @@ The graph displays the shifted x- and y-coordinate values using green and red in
 The square itself is created using an inequality with a domain restriction:
 
 $$
--1 \leq y \leq 1 \quad \lbrace -1 \leq x \leq 1 \rbrace
+-1 \leq y \leq 1 \lbrace -1 \leq x \leq 1 \rbrace
 $$
 
 Rather than assigning this region a fixed color, I used a variable RGB expression to make its fill color depend directly on the point's position.
