@@ -4,7 +4,7 @@ For my AP Calculus BC final project, I chose to use Desmos to explore how Bézie
 
 Beginning with four control points, I developed a series of linear, quadratic, and cubic Bézier curves, using equations and interactive points to visualize how increasingly complex curves emerge from a single interpolation formula.
 
-The project demonstrates both the algebraic derivation of Bézier curves and their geometric behavior as the control points and interpolation parameter change.
+This project demonstrates both the algebraic derivation of Bézier curves and their geometric behavior as the control points and interpolation parameter change.
 
 [**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/hidzrkyh1b)
 
