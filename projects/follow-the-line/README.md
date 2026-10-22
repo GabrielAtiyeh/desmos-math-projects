@@ -35,9 +35,9 @@ The graph displays the shifted x- and y-coordinate values using green and red in
 
 The square itself is created using an inequality with a domain restriction:
 
-```text
+$$
 -1 ≤ y ≤ 1 {-1 ≤ x ≤ 1}
-```
+$$
 
 Rather than assigning this region a fixed color, I used a variable RGB expression to make its fill color depend directly on the point's position.
 
@@ -49,9 +49,9 @@ $$
 
 I then defined the square's color using a piecewise RGB function:
 
-```text
+$$
 C_1 = {c_1 ≤ 127.5: rgb(2c_1,255,0), rgb(255,2(255-c_1),0)}
-```
+$$
 
 The two branches control different stages of the color transition:
 
