@@ -67,15 +67,15 @@ This connects the algebraic relationship between two coordinates to a continuous
 
 ### On the Line
 
-![Green](follow-the-line-green.png)
+![Green](images/follow-the-line-green.png)
 
 ### Moderate Error
 
-![Yellow](follow-the-line-yellow.png)
+![Yellow](images/follow-the-line-yellow.png)
 
 ### Large Error
 
-![Red](follow-the-line-red.png)
+![Red](images/follow-the-line-red.png)
 
 ## Mathematical Concepts
 
