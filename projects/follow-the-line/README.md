@@ -1,4 +1,3 @@
-
 # Follow the Line Game
 
 An interactive Desmos project where the goal is to move a draggable point as close as possible to the line $y=x$.
@@ -9,7 +8,7 @@ The square changes color based on the point's distance from the line, giving imm
 
 ## How It Works
 
-The game centers on a draggable point, $(a,b)$, inside a square bounded by $-1 \leq x \leq 1$ and $-1 \leq y \leq 1$. The objective is to position the point on the diagonal line $y=x$.
+The game centers on a draggable point, $(a,b)$, inside a square bounded by -1 ≤ x ≤ 1 and -1 ≤ y ≤ 1. The objective is to position the point on the diagonal line $y=x$.
 
 I designed a system that measures how closely the point follows this line and translates that measurement into visual feedback.
 
@@ -25,7 +24,7 @@ Adding 1 shifts both values into the interval $[0,2]$, providing a common zero b
 The error is calculated using the absolute difference:
 
 $$
-E = \lvert\, f_1(x)-f_2(x) \,\rvert = \lvert\, a-b \,\rvert
+E=|f_1(x)-f_2(x)|=|a-b|
 $$
 
 When $a=b$, the error is zero, meaning the point lies exactly on $y=x$. As the coordinates diverge, the error increases. This measurement is proportional to the point's perpendicular distance from the line.
@@ -36,33 +35,29 @@ The graph displays the shifted x- and y-coordinate values using green and red in
 
 The square itself is created using an inequality with a domain restriction:
 
-$$
--1 \leq y \leq 1 \quad \{-1 \leq x \leq 1\}
-$$
+```text
+-1 ≤ y ≤ 1 {-1 ≤ x ≤ 1}
+```
 
 Rather than assigning this region a fixed color, I used a variable RGB expression to make its fill color depend directly on the point's position.
 
 First, the error is scaled to determine the RGB channel values:
 
 $$
-c_1 = 255E
+c_1=255E
 $$
 
-I then defined the square's color using a piecewise function:
+I then defined the square's color using a piecewise RGB function:
 
-$$
-C_1 =
-\begin{cases}
-\operatorname{rgb}(2c_1,255,0), & c_1 \leq 127.5 \\[6pt]
-\operatorname{rgb}(255,2(255-c_1),0), & c_1 > 127.5
-\end{cases}
-$$
+```text
+C_1 = {c_1 ≤ 127.5: rgb(2c_1,255,0), rgb(255,2(255-c_1),0)}
+```
 
 The two branches control different stages of the color transition:
 
 - **Green to yellow:** As the error initially increases, the red channel increases while the green channel remains at full intensity.
 - **Yellow to red:** Once the error passes the piecewise threshold, the red channel stays at full intensity while the green channel decreases.
-- **Red:** At larger errors, the green channel reaches its lower limit and the square remains red, indicating that the point is far from the target line.
+- **Red:** At larger errors, the square remains red, indicating that the point is far from the target line.
 
 Because this RGB expression is assigned directly to the square's inequality, moving the draggable point causes the entire region to change color dynamically.
 
