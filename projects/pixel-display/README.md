@@ -260,13 +260,17 @@ This is where Desmos's list functionality became central to the project.
 
 The full project uses two list-based functions to evaluate positions across the display and individual indexed expressions to control each pixel's opacity.
 
-The screenshot below shows the completed 320-pixel display, the smaller touchpad, and the mathematical expressions used to organize the system.
+The screenshots below show the completed 320-pixel display, the smaller touchpad, and the mathematical expressions used to organize the system.
 
-The left side displays the two list-generating functions and representative pixel equations from the first row.
+In the first screenshot, the left side displays the two list-generating functions and representative indexed pixel equations from the first row.
 
-The right side shows the visual result: a single illuminated pixel corresponding to the position of the draggable point.
+In the second screenshot, the expressions panel is scrolled to the bottom of the twentieth row, showing the final indexed pixel functions, ending with $f_{320}(x)$. Together, the screenshots illustrate how the same mathematical structure is systematically applied across all 320 pixels.
+
+The right side of both screenshots shows the completed display, with a single illuminated pixel corresponding to the position of the draggable point.
 
 ![Completed Touchpad-Controlled Pixel Display](images/pixel-display-01.png)
+
+![Final Pixel Functions](images/pixel-display-06.png)
 
 ### Generating Coordinate Intervals with Lists
 
