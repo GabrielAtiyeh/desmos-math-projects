@@ -206,6 +206,12 @@ The pixel becomes fully opaque, appearing black.
 
 ![Both Conditions Satisfied](images/pixel-display-05.png)
 
+The connection between the conditional mathematics and the visual result is made through Desmos's Fill setting.
+
+As shown below, rather than assigning a constant opacity, I entered the function $f_1(x)$ directly into the pixel's Fill field. This allows the mathematical output to control the pixel's appearance automatically, changing its opacity between 0.2 and 1 as the draggable point moves.
+
+![Pixel Fill Controlled by a Function](images/pixel-display-fill.png)
+
 ### The Mathematical Result
 
 The four cases demonstrate that the pixel activates precisely when both positional conditions are satisfied.
