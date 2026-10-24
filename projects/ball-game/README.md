@@ -46,15 +46,15 @@ Each expression contains a frequency calculation and a restriction determining w
 For example, the beginning of the melody includes:
 
 $$
-f(0)\{0\leq x\leq2\}
+f(0)\lbrace 0\leq x\leq2\rbrace
 $$
 
 $$
-f(12)\{2\leq x\leq3\}
+f(12)\lbrace 2\leq x\leq3\rbrace
 $$
 
 $$
-f(9)\{3\leq x\leq4\}
+f(9)\lbrace 3\leq x\leq4\rbrace
 $$
 
 The first expression plays the frequency corresponding to $f(0)$ over the interval from 0 to 2. The second plays $f(12)$ from 2 to 3, and the third plays $f(9)$ from 3 to 4.
@@ -80,15 +80,15 @@ The harmony follows the same frequency function as the melody, but its notes gen
 For example, the beginning of the harmony includes:
 
 $$
-f(0)\{0\leq x\leq6\}
+f(0)\lbrace 0\leq x\leq6\rbrace
 $$
 
 $$
-f(4)\{6\leq x\leq9\}
+f(4)\lbrace 6\leq x\leq9\rbrace
 $$
 
 $$
-f(-5)\{9\leq x\leq12\}
+f(-5)\lbrace 9\leq x\leq12\rbrace
 $$
 
 Because the melody and harmony are stored in separate lists, both can be evaluated at the same position on the timeline and played simultaneously.
@@ -113,11 +113,11 @@ To convert the frequency expressions into sound, I used Desmos's `tone()` operat
 
 The melody is played using:
 
-` tone(M_elody(a)) `
+`tone(M_elody(a))`
 
 The harmony is played using:
 
-` tone(H_armony(a),0.6) `
+`tone(H_armony(a),0.6)`
 
 The second argument in the harmony expression reduces its volume relative to the melody.
 
@@ -183,74 +183,106 @@ This was an extension of the original project: a single additional variable made
 
 The complete melody and harmony are constructed from 85 domain-restricted expressions.
 
-The expressions are included below to document the mathematical structure of the composition. They are expandable because of their length.
+The expressions are included below in full to document the mathematical structure of the composition.
 
 ### Complete Melody
 
-<details>
-<summary>View Full Melody Expression — 60 Entries</summary>
-
-```text
-M_elody(x) = [
-  f(0){0 ≤ x ≤ 2},       f(12){2 ≤ x ≤ 3},
-  f(9){3 ≤ x ≤ 4},       f(7){4 ≤ x ≤ 5},
-  f(4){5 ≤ x ≤ 6},       f(7){6 ≤ x ≤ 9},
-  f(2){9 ≤ x ≤ 12},      f(0){12 ≤ x ≤ 14},
-  f(12){14 ≤ x ≤ 15},    f(9){15 ≤ x ≤ 16},
-  f(7){16 ≤ x ≤ 17},     f(4){17 ≤ x ≤ 18},
-  f(7){18 ≤ x ≤ 24},     f(9){24 ≤ x ≤ 25},
-  f(8){25 ≤ x ≤ 26},     f(9){26 ≤ x ≤ 27},
-  f(4){27 ≤ x ≤ 28},     f(5){28 ≤ x ≤ 29},
-  f(7){29 ≤ x < 30},     f(9){30 ≤ x ≤ 32},
-  f(5){32 ≤ x ≤ 33},     f(2){33 ≤ x ≤ 36},
-  f(9){36 ≤ x ≤ 37.8},   f(9){38 ≤ x ≤ 38.8},
-  f(9){39 ≤ x ≤ 40},     f(11){40 ≤ x ≤ 41},
-  f(12){41 ≤ x ≤ 42},    f(14){42 ≤ x ≤ 43},
-  f(11){43 ≤ x ≤ 44},    f(9){44 ≤ x ≤ 45},
-  f(7){45 ≤ x ≤ 46},     f(4){46 ≤ x ≤ 47},
-  f(2){47 ≤ x ≤ 48},     f(0){48 ≤ x ≤ 50},
-  f(12){50 ≤ x ≤ 51},    f(9){51 ≤ x ≤ 52},
-  f(7){52 ≤ x ≤ 53},     f(4){53 ≤ x ≤ 54},
-  f(7){54 ≤ x ≤ 57},     f(2){57 ≤ x ≤ 60},
-  f(0){60 ≤ x ≤ 61},     f(2){61 ≤ x ≤ 62},
-  f(4){62 ≤ x ≤ 63},     f(5){63 ≤ x ≤ 64},
-  f(7){64 ≤ x ≤ 65},     f(8){65 ≤ x ≤ 66},
-  f(9){66 ≤ x ≤ 70},     f(9){70.2 ≤ x ≤ 71},
-  f(11){71 ≤ x ≤ 72},    f(12){72 ≤ x ≤ 74.8},
-  f(12){75 ≤ x ≤ 77.8},  f(12){78 ≤ x ≤ 79},
-  f(11){79 ≤ x ≤ 80},    f(9){80 ≤ x ≤ 81},
-  f(7){81 ≤ x ≤ 82},     f(6){82 ≤ x ≤ 83},
-  f(7){83 ≤ x ≤ 84},     f(9){84 ≤ x ≤ 87},
-  f(11){87 ≤ x ≤ 90},    f(12){90 ≤ x ≤ 96}
+$$
+M_{elody}(x)=[
+f(0)\lbrace 0\leq x\leq2\rbrace,
+f(12)\lbrace 2\leq x\leq3\rbrace,
+f(9)\lbrace 3\leq x\leq4\rbrace,
+f(7)\lbrace 4\leq x\leq5\rbrace,
+f(4)\lbrace 5\leq x\leq6\rbrace,
+f(7)\lbrace 6\leq x\leq9\rbrace,
+f(2)\lbrace 9\leq x\leq12\rbrace,
+f(0)\lbrace 12\leq x\leq14\rbrace,
+f(12)\lbrace 14\leq x\leq15\rbrace,
+f(9)\lbrace 15\leq x\leq16\rbrace,
+f(7)\lbrace 16\leq x\leq17\rbrace,
+f(4)\lbrace 17\leq x\leq18\rbrace,
+f(7)\lbrace 18\leq x\leq24\rbrace,
+f(9)\lbrace 24\leq x\leq25\rbrace,
+f(8)\lbrace 25\leq x\leq26\rbrace,
+f(9)\lbrace 26\leq x\leq27\rbrace,
+f(4)\lbrace 27\leq x\leq28\rbrace,
+f(5)\lbrace 28\leq x\leq29\rbrace,
+f(7)\lbrace 29\leq x<30\rbrace,
+f(9)\lbrace 30\leq x\leq32\rbrace,
+f(5)\lbrace 32\leq x\leq33\rbrace,
+f(2)\lbrace 33\leq x\leq36\rbrace,
+f(9)\lbrace 36\leq x\leq37.8\rbrace,
+f(9)\lbrace 38\leq x\leq38.8\rbrace,
+f(9)\lbrace 39\leq x\leq40\rbrace,
+f(11)\lbrace 40\leq x\leq41\rbrace,
+f(12)\lbrace 41\leq x\leq42\rbrace,
+f(14)\lbrace 42\leq x\leq43\rbrace,
+f(11)\lbrace 43\leq x\leq44\rbrace,
+f(9)\lbrace 44\leq x\leq45\rbrace,
+f(7)\lbrace 45\leq x\leq46\rbrace,
+f(4)\lbrace 46\leq x\leq47\rbrace,
+f(2)\lbrace 47\leq x\leq48\rbrace,
+f(0)\lbrace 48\leq x\leq50\rbrace,
+f(12)\lbrace 50\leq x\leq51\rbrace,
+f(9)\lbrace 51\leq x\leq52\rbrace,
+f(7)\lbrace 52\leq x\leq53\rbrace,
+f(4)\lbrace 53\leq x\leq54\rbrace,
+f(7)\lbrace 54\leq x\leq57\rbrace,
+f(2)\lbrace 57\leq x\leq60\rbrace,
+f(0)\lbrace 60\leq x\leq61\rbrace,
+f(2)\lbrace 61\leq x\leq62\rbrace,
+f(4)\lbrace 62\leq x\leq63\rbrace,
+f(5)\lbrace 63\leq x\leq64\rbrace,
+f(7)\lbrace 64\leq x\leq65\rbrace,
+f(8)\lbrace 65\leq x\leq66\rbrace,
+f(9)\lbrace 66\leq x\leq70\rbrace,
+f(9)\lbrace 70.2\leq x\leq71\rbrace,
+f(11)\lbrace 71\leq x\leq72\rbrace,
+f(12)\lbrace 72\leq x\leq74.8\rbrace,
+f(12)\lbrace 75\leq x\leq77.8\rbrace,
+f(12)\lbrace 78\leq x\leq79\rbrace,
+f(11)\lbrace 79\leq x\leq80\rbrace,
+f(9)\lbrace 80\leq x\leq81\rbrace,
+f(7)\lbrace 81\leq x\leq82\rbrace,
+f(6)\lbrace 82\leq x\leq83\rbrace,
+f(7)\lbrace 83\leq x\leq84\rbrace,
+f(9)\lbrace 84\leq x\leq87\rbrace,
+f(11)\lbrace 87\leq x\leq90\rbrace,
+f(12)\lbrace 90\leq x\leq96\rbrace
 ]
-```
-
-</details>
+$$
 
 ### Complete Harmony
 
-<details>
-<summary>View Full Harmony Expression — 25 Entries</summary>
-
-```text
-H_armony(x) = [
-  f(0){0 ≤ x ≤ 6},       f(4){6 ≤ x ≤ 9},
-  f(-5){9 ≤ x ≤ 12},     f(0){12 ≤ x ≤ 18},
-  f(4){18 ≤ x ≤ 24},     f(5){24 ≤ x ≤ 30},
-  f(2){30 ≤ x ≤ 36},     f(-1){36 ≤ x ≤ 42},
-  f(7){42 ≤ x ≤ 45},     f(-5){45 ≤ x ≤ 48},
-  f(0){48 ≤ x ≤ 54},     f(4){54 ≤ x ≤ 57},
-  f(-5){57 ≤ x ≤ 60},    f(-3){60 ≤ x ≤ 63},
-  f(-1){63 ≤ x ≤ 66},    f(0){66 ≤ x ≤ 72},
-  f(5){72 ≤ x ≤ 75},     f(6){75 ≤ x ≤ 78},
-  f(7){78 ≤ x ≤ 84},     f(5){84 ≤ x ≤ 87},
-  f(7){90 ≤ x ≤ 96},     f(4){90 ≤ x ≤ 96},
-  f(0){84 ≤ x ≤ 87},     f(-5){87 ≤ x ≤ 90},
-  f(0){90 ≤ x ≤ 96}
+$$
+H_{armony}(x)=[
+f(0)\lbrace 0\leq x\leq6\rbrace,
+f(4)\lbrace 6\leq x\leq9\rbrace,
+f(-5)\lbrace 9\leq x\leq12\rbrace,
+f(0)\lbrace 12\leq x\leq18\rbrace,
+f(4)\lbrace 18\leq x\leq24\rbrace,
+f(5)\lbrace 24\leq x\leq30\rbrace,
+f(2)\lbrace 30\leq x\leq36\rbrace,
+f(-1)\lbrace 36\leq x\leq42\rbrace,
+f(7)\lbrace 42\leq x\leq45\rbrace,
+f(-5)\lbrace 45\leq x\leq48\rbrace,
+f(0)\lbrace 48\leq x\leq54\rbrace,
+f(4)\lbrace 54\leq x\leq57\rbrace,
+f(-5)\lbrace 57\leq x\leq60\rbrace,
+f(-3)\lbrace 60\leq x\leq63\rbrace,
+f(-1)\lbrace 63\leq x\leq66\rbrace,
+f(0)\lbrace 66\leq x\leq72\rbrace,
+f(5)\lbrace 72\leq x\leq75\rbrace,
+f(6)\lbrace 75\leq x\leq78\rbrace,
+f(7)\lbrace 78\leq x\leq84\rbrace,
+f(5)\lbrace 84\leq x\leq87\rbrace,
+f(7)\lbrace 90\leq x\leq96\rbrace,
+f(4)\lbrace 90\leq x\leq96\rbrace,
+f(0)\lbrace 84\leq x\leq87\rbrace,
+f(-5)\lbrace 87\leq x\leq90\rbrace,
+f(0)\lbrace 90\leq x\leq96\rbrace
 ]
-```
-
-</details>
+$$
 
 These expressions use Desmos lists rather than conventional single-valued piecewise functions. This allows multiple restricted expressions to remain active over the same interval, producing simultaneous notes and chords.
 
