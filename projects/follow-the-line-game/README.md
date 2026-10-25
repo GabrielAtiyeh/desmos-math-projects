@@ -1,6 +1,6 @@
 # Follow the Line Game
 
-This project is an interactive Desmos graph where the goal is to move a draggable point as close as possible to the line $y=x$.
+An interactive Desmos project where the goal is to move a draggable point as close as possible to the line $y=x$.
 
 The square changes color based on the point's distance from the line, giving immediate visual feedback.
 
