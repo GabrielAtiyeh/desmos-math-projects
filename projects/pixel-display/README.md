@@ -210,7 +210,7 @@ The connection between the conditional mathematics and the visual result is made
 
 As shown below, rather than assigning a constant opacity, I entered the function $f_1(x)$ directly into the pixel's Fill field. This allows the mathematical output to control the pixel's appearance automatically, changing its opacity between 0.2 and 1 as the draggable point moves.
 
-![Pixel Fill Controlled by a Function](images/pixel-display-fill.png)
+![Pixel Fill Controlled by a Function](images/pixel-display-07.png)
 
 ### The Mathematical Result
 
