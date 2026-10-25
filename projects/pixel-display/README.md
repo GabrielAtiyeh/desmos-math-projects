@@ -119,7 +119,7 @@ The corresponding fill function determines whether that region appears dim or fu
 For the pixel in the explanation graph, I used:
 
 $$
-f_1(x)=\lbrace f_{row}(x)=f_{column}(x):1,\ f_{row}(x)<f_{column}(x):0.2,\ f_{row}(x)>f_{column}(x):0.2\rbrace
+f_1(x)=\lbrace f_{row}(x)=f_{column}(x):1,\ f_{row}(x)\neq f_{column}(x):0.2\rbrace
 $$
 
 The function returns one of two opacity values:
