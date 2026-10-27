@@ -9,9 +9,9 @@ The project developed into two connected mathematical challenges: creating a sys
 
 The completed display contains 320 individually controlled pixel regions, all governed by the same underlying conditional logic.
 
-[**Explore the Completed Pixel Display in Desmos**](https://www.desmos.com/calculator/jqsijg4zbj)
+[**Explore the Completed Pixel Display in Desmos**](https://www.desmos.com/calculator/yqieavuall)
 
-[**Explore the Single-Pixel Explanation in Desmos**](https://www.desmos.com/calculator/p1wxaqyzvm)
+[**Explore the Single-Pixel Explanation in Desmos**](https://www.desmos.com/calculator/yuznxumskt)
 
 ## Part One: Developing the Conditional Logic
 
