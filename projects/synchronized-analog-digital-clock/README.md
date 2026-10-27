@@ -2,7 +2,7 @@
 
 I built this clock entirely in the Desmos Graphing Calculator. It combines a rotating analog clock, a labeled time slider, a four-digit seven-segment digital display, and a blinking colon. The analog hands and all four digits are synchronized by one parameter, $a$, which moves from $0$ to $2\pi$.
 
-[**Open the Interactive Clock in Desmos**](PASTE_YOUR_DESMOS_SHARE_LINK_HERE)
+[**Explore the Interactive Graph in Desmos**](PASTE_YOUR_DESMOS_SHARE_LINK_HERE)
 
 Every visible component is constructed from equations: circular inequalities for the clock face, trigonometric coordinates for the hands, rectangular inequalities for the digital segments, and functions that control which segments appear bright or dim. Different parts of the digital clock required different mathematical solutions, from long piecewise functions to modular arithmetic and trigonometric oscillation.
 
