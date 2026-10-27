@@ -6,7 +6,7 @@ Beginning with four control points, I developed a series of linear, quadratic, a
 
 This project demonstrates both the algebraic derivation of Bézier curves and their geometric behavior as the control points and interpolation parameter change.
 
-[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/hidzrkyh1b)
+[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/ggu5m46gpj)
 
 ## How It Works
 
