@@ -6,7 +6,7 @@ After discovering that Desmos could generate sound from mathematical expressions
 
 I initially constructed the song in A, then expanded the project by creating an interactive key-transposition system. This allows the entire melody and harmony to shift between musical keys without changing their original note sequences or timing.
 
-[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/ifstrdlxoa)
+[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/a7lmqu6y05)
 
 ## How It Works
 
