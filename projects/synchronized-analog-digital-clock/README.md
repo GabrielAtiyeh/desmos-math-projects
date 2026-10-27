@@ -364,5 +364,3 @@ The four displays were not solved in exactly the same way because each one had a
 - **Modular arithmetic:** Repeating the same tens-of-minutes pattern every hour without duplicating conditions.
 - **Periodic functions:** Alternating opacity with a pair of complementary cosine expressions.
 - **Synchronization:** Coordinating different mathematical representations of time through a single variable.
-
-I particularly liked discovering that the most efficient mathematical technique depended on the behavior I needed. The tens-of-hours digit required a simple switch; the ones-of-hours digit required a large collection of piecewise rules; the tens-of-minutes digit was naturally expressed using modulo; and the ones-of-minutes digit could be built from cosine. Together, those different functions create one interactive clock using only Desmos mathematics.
