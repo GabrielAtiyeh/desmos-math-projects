@@ -279,8 +279,6 @@ $$
 f_{9}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<1.5:1,1.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:0.2,3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<7.5:1,7.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<9.5:0.2,\mathrm{mod}(\frac{72a}{\pi}-0,12)>9.5\}
 $$
 
-The top horizontal segment follows the same visible bright-and-dim pattern as the bottom segment. The final condition is reproduced as it appears in the exported Desmos equation, without an explicit `:1` value.
-
 Modulo made this section considerably more manageable: the equations only need to describe a repeating six-digit pattern, rather than treating every hour as a completely separate case.
 
 ### All Six Tens-of-Minutes States
