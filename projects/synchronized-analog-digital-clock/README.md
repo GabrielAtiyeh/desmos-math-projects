@@ -4,7 +4,7 @@ An interactive Desmos project that synchronizes a rotating analog clock with a f
 
 The entire clock is controlled by a single parameter, $a$, which runs from $0$ to $2\pi$. Moving its slider changes the analog hands, the marked time on a horizontal timeline, and the four numerical displays together. Each digital segment is an inequality whose fill opacity is determined mathematically.
 
-[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/dqncfym1me)
+[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/acr8yejq5w)
 
 ## Full Clock Examples
 
