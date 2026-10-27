@@ -19,25 +19,25 @@ The analog clock uses trigonometric functions to control the rotation of its han
 
 This is my most extensive Desmos project, combining several different mathematical techniques into one interactive system.
 
-### 2. [Touchpad-Controlled Pixel Display](touchpad-controlled-pixel-display/README.md)
+### 2. [Touchpad-Controlled Pixel Display](projects/pixel-display/README.md)
 
 A 16 × 20 pixel display containing 320 individually controlled pixels, operated using a draggable point on a smaller touchpad.
 
 The project uses piecewise functions, inequalities, and list indexing to translate the position of the draggable point into the corresponding illuminated pixel. I constructed functions that identify the row and column selected by the touchpad, then combined their conditions to determine which individual pixel should be illuminated. This required finding a way to represent two-dimensional position and conditional behavior entirely through mathematical expressions, rather than conventional programming. It explores how mathematical expressions can create conditional behavior similar to the logic used in computer programming.
 
-### 3. [Bézier Curve](bezier-curve/README.md)
+### 3. [Bézier Curve](projects/bezier-curve/README.md)
 
 An interactive construction of a cubic Bézier curve, originally developed as my AP Calculus BC final project.
 
 Using linear interpolation and parametric equations, I constructed the curve through the geometric process known as de Casteljau's algorithm. The graph shows the intermediate points and line segments involved in generating the curve, with draggable control points that allow its shape to change dynamically. By repeatedly interpolating between points, I was able to visualize how a smooth curve emerges from a sequence of simpler linear relationships. The project also allows the interpolation parameter to change, illustrating how the construction progresses from one endpoint of the curve to the other.
 
-### 4. [Take Me Out to the Ball Game](take-me-out-to-the-ball-game/README.md)
+### 4. [Take Me Out to the Ball Game](projects/ball-game/README.md)
 
 A mathematical recreation of *Take Me Out to the Ball Game* that plays both its melody and harmony using Desmos.
 
 The project uses exponential functions to calculate musical frequencies and piecewise functions to organize the sequence of notes. I used the mathematical relationship between pitch and frequency to assign the appropriate frequencies to different musical notes, then combined these expressions into a piecewise representation of the song. A variable also allows the music to be transposed into different keys, demonstrating the mathematical relationships between musical pitches. This project gave me an opportunity to explore how equations can represent not only visual patterns but also sound and musical structure.
 
-### 5. [Follow the Line Game](follow-the-line-game/README.md)
+### 5. [Follow the Line Game](projects/follow-the-line-game/README.md)
 
 An interactive game in which the player attempts to follow a moving line and receives visual feedback based on their accuracy.
 
