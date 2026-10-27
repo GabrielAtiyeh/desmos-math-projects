@@ -15,7 +15,7 @@ Each project has its own folder containing a detailed README with explanations o
 
 An interactive clock featuring synchronized analog hands, a horizontal time slider, and a four-digit seven-segment display constructed entirely from mathematical expressions.
 
-The analog clock uses trigonometric functions to control the rotation of its hands, while the digital clock uses piecewise functions, modular arithmetic, and periodic cosine functions to illuminate the appropriate segments. Each of the four digital digits required a different mathematical approach, from relatively simple piecewise conditions to longer functions controlling individual segments of each seven-segment display. I also used modular arithmetic to simplify repeating patterns and complementary cosine functions to alternate between digits without additional piecewise restrictions. All components are synchronized through a single variable.
+The analog clock uses trigonometric functions to control the rotation of its hands, while the digital clock uses piecewise functions, modular arithmetic, and periodic cosine functions to illuminate the appropriate segments of each seven-segment display. Each of the four digital digits required a different mathematical approach, from relatively simple piecewise conditions to longer functions controlling individual segments. I also used modular arithmetic to simplify repeating patterns and complementary cosine functions to alternate between digits without additional piecewise restrictions. All components are synchronized through a single variable.
 
 This is my most extensive Desmos project, combining several different mathematical techniques into one interactive system.
 
