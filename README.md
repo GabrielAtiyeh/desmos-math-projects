@@ -11,7 +11,7 @@ Each project has its own folder containing a detailed README with explanations o
 
 ## Projects
 
-### 1. [Synchronized Analog and Digital Clock]([desmos-math-projects/projects/synchronized-analog-digital-clock/README.md](https://github.com/GabrielAtiyeh/desmos-math-projects/blob/main/projects/synchronized-analog-digital-clock/README.md))
+### 1. [Synchronized Analog and Digital Clock](projects/synchronized-analog-digital-display/README.md)
 
 An interactive clock featuring synchronized analog hands, a horizontal time slider, and a four-digit seven-segment display constructed entirely from mathematical expressions.
 
