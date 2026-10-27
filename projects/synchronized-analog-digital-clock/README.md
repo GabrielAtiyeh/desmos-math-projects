@@ -19,7 +19,7 @@ $$
 The small center circle is defined by $x^2+(y-2.2)^2\leq 0.05$. I arranged the twelve hour markers around a circle of radius $2.4$ using coordinates of the form
 
 $$
-\left(2.4\cos\theta,\;2.4\sin\theta+2.2\right),\qquad \theta=\frac{k\pi}{6}\quad(k=0,1,\ldots,11)
+(2.4\cos\theta,\;2.4\sin\theta+2.2),\qquad \theta=\frac{k\pi}{6}\quad(k=0,1,\ldots,11)
 $$
 
 The clock hands are formed from connected points in Desmos tables. Each table starts at the center, $(0,2.2)$, and ends at a point whose coordinates depend on $a$.
@@ -27,13 +27,13 @@ The clock hands are formed from connected points in Desmos tables. Each table st
 **Hour hand endpoint:**
 
 $$
-\left(-1.8\cos\left(a+\frac{\pi}{2}\right),\;1.8\sin\left(a+\frac{\pi}{2}\right)+2.2\right)
+(-1.8\cos(a+\frac{\pi}{2}),\;1.8\sin(a+\frac{\pi}{2})+2.2)
 $$
 
 **Minute hand endpoint:**
 
 $$
-\left(-2.4\cos\left(12a+\frac{\pi}{2}\right),\;2.4\sin\left(12a+\frac{\pi}{2}\right)+2.2\right)
+(-2.4\cos(12a+\frac{\pi}{2}),\;2.4\sin(12a+\frac{\pi}{2})+2.2)
 $$
 
 The hour hand is shorter, and the minute hand rotates twelve times as quickly because its angle uses $12a$ instead of $a$. When $a=0$, both hands point to 12. When $a$ completes one full cycle, the hour hand has made one revolution and the minute hand has made twelve. Connecting the center to each moving endpoint produces the visible hands without needing to draw them individually at different times.
@@ -45,7 +45,7 @@ This part of the graph is primarily visual. The greater challenge was translatin
 Above the clock, I drew a line segment using $y=5$ with the restriction $-12\leq x\leq-3$, then placed a moving point on it. Its coordinates are
 
 $$
-\left(\frac{9a}{2\pi}-12,\;5\right)
+(\frac{9a}{2\pi}-12,\;5)
 $$
 
 I labeled points along this line with 12:00, 1:00, 2:00, and so on until it returns to 12:00. As $a$ moves from $0$ to $2\pi$, the point travels along the labeled line and the two clock hands rotate accordingly.
@@ -69,13 +69,13 @@ Each digital digit is made of seven small rectangles: a top, middle, and bottom 
 For example, the **top horizontal** segment of the ones-of-hours display uses
 
 $$
--2.5\leq x\leq-1.25\;\left\{-1.85\leq y\leq-1.45\right\}
+-2.5\leq x\leq-1.25\;\{-1.85\leq y\leq-1.45\}
 $$
 
 while its **upper-right** vertical segment uses
 
 $$
--3.2\leq y\leq-1.95\;\left\{-1.15\leq x\leq-0.75\right\}
+-3.2\leq y\leq-1.95\;\{-1.15\leq x\leq-0.75\}
 $$
 
 The four digits share the same vertical layout, with the upper horizontal segment at $-1.85\leq y\leq-1.45$, the middle at $-3.7\leq y\leq-3.3$, and the bottom at $-5.55\leq y\leq-5.15$. The upper vertical segments use $-3.2\leq y\leq-1.95$ and the lower ones use $-5.05\leq y\leq-3.8$.
@@ -102,7 +102,7 @@ Only the **upper-right and lower-right vertical segments** need to become fully 
 **$f_{17}(x)$ — upper-right and lower-right segments:**
 
 $$
-f_{17}(x)=\left\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<119.5:0.2,\;\frac{72a}{\pi}>119.5:1\right\}
+f_{17}(x)=\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<119.5:0.2,\;\frac{72a}{\pi}>119.5:1\}
 $$
 
 The first part of the function lights the two vertical segments at the beginning of the cycle. The middle interval dims them through the single-digit hours. The final interval lights them again when the hour reaches 10. I chose half-integer boundaries to put the switch between consecutive five-minute settings.
@@ -128,7 +128,7 @@ Some segments are bright for most numerals and need only a few conditions. Other
 ### Middle horizontal segment — $f_{10}(x)$
 
 $$
-f_{10}(x)=\left\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<119.5:1,\;119.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\right\}
+f_{10}(x)=\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<119.5:1,\;119.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\}
 $$
 
 The middle horizontal segment is dim for numerals that do not use a central bar, such as 1, 7, and 0. Its function alternates between bright and dim ranges as the hour changes.
@@ -136,7 +136,7 @@ The middle horizontal segment is dim for numerals that do not use a central bar,
 ### Upper-right vertical segment — $f_{11}(x)$
 
 $$
-f_{11}(x)=\left\{\frac{72a}{\pi}<59.5:1,\;59.5<\frac{72a}{\pi}<83.5:0.2,\;\frac{72a}{\pi}>83.5:1\right\}
+f_{11}(x)=\{\frac{72a}{\pi}<59.5:1,\;59.5<\frac{72a}{\pi}<83.5:0.2,\;\frac{72a}{\pi}>83.5:1\}
 $$
 
 The upper-right vertical segment stays bright for most of the hours; it dims during the interval corresponding to the numerals 5 and 6.
@@ -144,7 +144,7 @@ The upper-right vertical segment stays bright for most of the hours; it dims dur
 ### Lower-right vertical segment — $f_{12}(x)$
 
 $$
-f_{12}(x)=\left\{\frac{72a}{\pi}<11.5:0.2,\;11.5<\frac{72a}{\pi}<23.5:1,\;23.5<\frac{72a}{\pi}<35.5:0.2,\;35.5<\frac{72a}{\pi}<143.5:1,\;\frac{72a}{\pi}>143.5:0.2\right\}
+f_{12}(x)=\{\frac{72a}{\pi}<11.5:0.2,\;11.5<\frac{72a}{\pi}<23.5:1,\;23.5<\frac{72a}{\pi}<35.5:0.2,\;35.5<\frac{72a}{\pi}<143.5:1,\;\frac{72a}{\pi}>143.5:0.2\}
 $$
 
 The lower-right vertical segment is dim for 2, but it is needed by many of the other digits. The function changes its opacity as the displayed hour changes.
@@ -152,7 +152,7 @@ The lower-right vertical segment is dim for 2, but it is needed by many of the o
 ### Bottom horizontal segment — $f_{13}(a)$
 
 $$
-f_{13}(a)=\left\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<47.5:1,\;47.5<\frac{72a}{\pi}<59.5:0.2,\;59.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<107.5:1,\;107.5<\frac{72a}{\pi}<119.5:0.2,\;119.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\right\}
+f_{13}(a)=\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<47.5:1,\;47.5<\frac{72a}{\pi}<59.5:0.2,\;59.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<107.5:1,\;107.5<\frac{72a}{\pi}<119.5:0.2,\;119.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\}
 $$
 
 The bottom horizontal segment has one of the longest expressions because its fill changes repeatedly throughout the twelve-hour cycle. Each interval specifies the opacity for that segment at the corresponding hour.
@@ -160,7 +160,7 @@ The bottom horizontal segment has one of the longest expressions because its fil
 ### Upper-left vertical segment — $f_{14}(x)$
 
 $$
-f_{14}(x)=\left\{\frac{72a}{\pi}<47.5:0.2,\;47.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<131.5:1,\;\frac{72a}{\pi}>131.5:0.2\right\}
+f_{14}(x)=\{\frac{72a}{\pi}<47.5:0.2,\;47.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<131.5:1,\;\frac{72a}{\pi}>131.5:0.2\}
 $$
 
 The upper-left vertical segment is used by digits such as 4, 5, 6, 8, 9, and 0. It can therefore be dimmed across several earlier hour values before becoming bright.
@@ -168,7 +168,7 @@ The upper-left vertical segment is used by digits such as 4, 5, 6, 8, 9, and 0. 
 ### Lower-left vertical segment — $f_{15}(x)$
 
 $$
-f_{15}(x)=\left\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<35.5:1,\;35.5<\frac{72a}{\pi}<71.5:0.2,\;71.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<107.5:1,\;107.5<\frac{72a}{\pi}<119.5:0.2,\;119.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\right\}
+f_{15}(x)=\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<35.5:1,\;35.5<\frac{72a}{\pi}<71.5:0.2,\;71.5<\frac{72a}{\pi}<83.5:1,\;83.5<\frac{72a}{\pi}<95.5:0.2,\;95.5<\frac{72a}{\pi}<107.5:1,\;107.5<\frac{72a}{\pi}<119.5:0.2,\;119.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\}
 $$
 
 The lower-left vertical segment requires another long sequence of conditions, including bright intervals for numerals such as 2, 6, 8, and 0.
@@ -176,7 +176,7 @@ The lower-left vertical segment requires another long sequence of conditions, in
 ### Top horizontal segment — $f_{16}(x)$
 
 $$
-f_{16}(x)=\left\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<47.5:1,\;47.5<\frac{72a}{\pi}<59.5:0.2,\;59.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\right\}
+f_{16}(x)=\{\frac{72a}{\pi}<11.5:1,\;11.5<\frac{72a}{\pi}<23.5:0.2,\;23.5<\frac{72a}{\pi}<47.5:1,\;47.5<\frac{72a}{\pi}<59.5:0.2,\;59.5<\frac{72a}{\pi}<131.5:1,\;131.5<\frac{72a}{\pi}<143.5:0.2,\;\frac{72a}{\pi}>143.5:1\}
 $$
 
 The top horizontal segment is bright for most numerals, but dims for 1 and 4. The piecewise boundaries encode those exceptions.
@@ -206,7 +206,7 @@ The third position displays **0, 1, 2, 3, 4, 5**, changing every ten minutes. Un
 To avoid that repetition, I used **modular arithmetic**. The repeated expression in the seven fill functions is
 
 $$
-\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)
+\mathrm{mod}(\frac{72a}{\pi}-0,12)
 $$
 
 The modulo operation returns the remainder after division by 12. Since $72a/\pi$ increases by 12 units each hour, the remainder starts over at the beginning of every hour. At :00, :10, :20, :30, :40, and :50, its values are $0$, $2$, $4$, $6$, $8$, and $10$.
@@ -218,7 +218,7 @@ This allowed me to write the conditions for **one hour only**. The same function
 ### Middle horizontal segment — $f_{3}(x)$
 
 $$
-f_{3}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<3.5:0.2,\;3.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<11.5:1,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>11.5:0.2\right\}
+f_{3}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:0.2,\;3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<11.5:1,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>11.5:0.2\}
 $$
 
 The middle horizontal segment is dim for 0 and 1, then bright for 2, 3, 4, and 5. The final interval prepares it to return to its starting state.
@@ -226,7 +226,7 @@ The middle horizontal segment is dim for 0 and 1, then bright for 2, 3, 4, and 5
 ### Upper-left vertical segment — $f_{4}(x)$
 
 $$
-f_{4}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<1.5:1,\;1.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<7.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>7.5:1\right\}
+f_{4}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<1.5:1,\;1.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<7.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>7.5:1\}
 $$
 
 The upper-left vertical segment is bright for 0, 4, and 5, but dim for 1, 2, and 3.
@@ -234,7 +234,7 @@ The upper-left vertical segment is bright for 0, 4, and 5, but dim for 1, 2, and
 ### Lower-left vertical segment — $f_{5}(x)$
 
 $$
-f_{5}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<1.5:1,\;1.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<3.5:0.2,\;3.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<5.5:1,\;5.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<11.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>11.5:1\right\}
+f_{5}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<1.5:1,\;1.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:0.2,\;3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<5.5:1,\;5.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<11.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>11.5:1\}
 $$
 
 The lower-left vertical segment is bright for 0 and 2, but dim for 1, 3, 4, and 5.
@@ -242,7 +242,7 @@ The lower-left vertical segment is bright for 0 and 2, but dim for 1, 3, 4, and 
 ### Bottom horizontal segment — $f_{6}(x)$
 
 $$
-f_{6}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<1.5:1,\;1.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<3.5:0.2,\;3.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<7.5:1,\;7.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<9.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>9.5:1\right\}
+f_{6}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<1.5:1,\;1.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:0.2,\;3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<7.5:1,\;7.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<9.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>9.5:1\}
 $$
 
 The bottom horizontal segment is bright for 0, 2, 3, and 5 and dim for 1 and 4.
@@ -250,7 +250,7 @@ The bottom horizontal segment is bright for 0, 2, 3, and 5 and dim for 1 and 4.
 ### Upper-right vertical segment — $f_{7}(x)$
 
 $$
-f_{7}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<9.5:1,\;9.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<11.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>11.5:1\right\}
+f_{7}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<9.5:1,\;9.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<11.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>11.5:1\}
 $$
 
 The upper-right vertical segment is bright for 0 through 4, then dims for 5.
@@ -258,7 +258,7 @@ The upper-right vertical segment is bright for 0 through 4, then dims for 5.
 ### Lower-right vertical segment — $f_{8}(x)$
 
 $$
-f_{8}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<3.5:1,\;3.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<5.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>5.5:1\right\}
+f_{8}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:1,\;3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<5.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>5.5:1\}
 $$
 
 The lower-right vertical segment is bright for every digit in this sequence except 2.
@@ -266,7 +266,7 @@ The lower-right vertical segment is bright for every digit in this sequence exce
 ### Top horizontal segment — $f_{9}(x)$
 
 $$
-f_{9}(x)=\left\{\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<1.5:1,\;1.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<3.5:0.2,\;3.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<7.5:1,\;7.5<\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)<9.5:0.2,\;\operatorname{mod}\left(\frac{72a}{\pi}-0,12\right)>9.5\right\}
+f_{9}(x)=\{\mathrm{mod}(\frac{72a}{\pi}-0,12)<1.5:1,\;1.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<3.5:0.2,\;3.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<7.5:1,\;7.5<\mathrm{mod}(\frac{72a}{\pi}-0,12)<9.5:0.2,\;\mathrm{mod}(\frac{72a}{\pi}-0,12)>9.5\}
 $$
 
 The top horizontal segment follows the same visible bright-and-dim pattern as the bottom segment. The final condition is reproduced as it appears in the exported Desmos equation, without an explicit `:1` value.
@@ -292,7 +292,7 @@ The top, upper-left, lower-right, and bottom segments stay bright for both 0 and
 ### Middle horizontal segment — $f_1(x)$
 
 $$
-f_1(x)=0.2+0.8\left(\frac{1-\cos(72a)}{2}\right)
+f_1(x)=0.2+0.8(\frac{1-\cos(72a)}{2})
 $$
 
 This function controls the **middle horizontal segment**, which is dim for 0 and bright for 5.
@@ -300,7 +300,7 @@ This function controls the **middle horizontal segment**, which is dim for 0 and
 ### Upper-right and lower-left segments — $f_2(x)$
 
 $$
-f_2(x)=0.2+0.8\left(\frac{1+\cos(72a)}{2}\right)
+f_2(x)=0.2+0.8(\frac{1+\cos(72a)}{2})
 $$
 
 This function controls the **upper-right** and **lower-left vertical segments**. Both are bright for 0 and dim for 5.
@@ -338,11 +338,11 @@ These four screenshots show **0 → 5 → 0 → 5**, corresponding to 12:00, 12:
 I made the two dots between hours and minutes with two more rectangular inequalities:
 
 $$
--0.2\leq x\leq0.2\;\left\{-2.6\leq y\leq-2.2\right\}
+-0.2\leq x\leq0.2\;\{-2.6\leq y\leq-2.2\}
 $$
 
 $$
--0.2\leq x\leq0.2\;\left\{-4.8\leq y\leq-4.4\right\}
+-0.2\leq x\leq0.2\;\{-4.8\leq y\leq-4.4\}
 $$
 
 Their fill is controlled by a second animated slider, $b$, which changes between $0.2$ and $1$ in increments of $0.8$. This makes the colon blink independently of $a$, even when the analog hands and digital digits are stopped at a specific time.
