@@ -90,15 +90,6 @@ $$
 
 The four digits share the same vertical layout, with the upper horizontal segment at $-1.85\leq y\leq-1.45$, the middle at $-3.7\leq y\leq-3.3$, and the bottom at $-5.55\leq y\leq-5.15$. The upper vertical segments use $-3.2\leq y\leq-1.95$ and the lower ones use $-5.05\leq y\leq-3.8$.
 
-The horizontal positions change from digit to digit:
-
-| Display | Horizontal bars | Left vertical bars | Right vertical bars |
-| :--- | :--- | :--- | :--- |
-| Tens of hours | $-5.2\leq x\leq-3.95$ | $-5.7\leq x\leq-5.3$ | $-3.85\leq x\leq-3.45$ |
-| Ones of hours | $-2.5\leq x\leq-1.25$ | $-3\leq x\leq-2.6$ | $-1.15\leq x\leq-0.75$ |
-| Tens of minutes | $1.25\leq x\leq2.5$ | $0.75\leq x\leq1.15$ | $2.6\leq x\leq3$ |
-| Ones of minutes | $3.95\leq x\leq5.2$ | $3.45\leq x\leq3.85$ | $5.3\leq x\leq5.7$ |
-
 I assigned mathematical expressions to the rectangles' **Fill** properties. An opacity of $1$ makes a segment black; an opacity of $0.2$ makes it light gray. Keeping the inactive segments gray leaves the seven-segment outlines visible at all times. The fill functions do not replace entire numerals: they control individual rectangles, which combine to form each numeral.
 
 The following sections contain **all seventeen fill functions**, written with the same numerical conditions as in my Desmos graph. The long functions are kept on single lines so their full patterns can be read by scrolling horizontally, rather than splitting them into stacked cases.
