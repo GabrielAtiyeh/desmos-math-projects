@@ -4,7 +4,7 @@ An interactive Desmos project where the goal is to move a draggable point as clo
 
 The square changes color based on the point's distance from the line, giving immediate visual feedback.
 
-[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/dh5ypl5lae)
+[**Explore the Interactive Graph in Desmos**](https://www.desmos.com/calculator/ezyuyf99my)
 
 ## How It Works
 
