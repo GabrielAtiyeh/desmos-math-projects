@@ -356,11 +356,6 @@ The four displays were not solved in exactly the same way because each one had a
 
 ## Mathematical Concepts
 
-- **Trigonometry:** Positioning the hour markers and rotating two clock hands at different angular speeds.
-- **Inequalities and coordinate geometry:** Constructing circles, a circular ring, and the seven rectangles in every digit.
-- **Parametric coordinates and Desmos tables:** Drawing clock hands between a fixed center and moving endpoints.
-- **Linear scaling:** Translating an angular parameter into a numerical timeline measured in five-minute increments.
-- **Piecewise functions:** Controlling the illumination of individual seven-segment strokes across the twelve-hour cycle.
-- **Modular arithmetic:** Repeating the same tens-of-minutes pattern every hour without duplicating conditions.
-- **Periodic functions:** Alternating opacity with a pair of complementary cosine expressions.
-- **Synchronization:** Coordinating different mathematical representations of time through a single variable.
+This project combines several mathematical ideas to create a single synchronized system. I used trigonometry and coordinate geometry to construct the analog clock, positioning its hour markers with sine and cosine and controlling the rotation of its hands through parametric coordinates. I also used inequalities to create the circular clock face and the rectangular regions that form the digital display.
+
+The digital clock required a more extensive application of piecewise functions, with individual equations determining when each segment should appear illuminated or dim. I used linear scaling to convert the angular parameter into five-minute intervals, then incorporated modular arithmetic to make the tens-of-minutes display repeat its pattern every hour. For the ones-of-minutes display, I used periodic trigonometric functions to alternate between 0 and 5 without needing another long set of piecewise conditions.
